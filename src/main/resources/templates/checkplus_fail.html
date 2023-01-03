@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Checkplus 본인인증</title>
+    <script language='javascript'>
+        window.onload = function(){
+            console.log('[[${frontAddr}]]');
+            const frontAddr = '[[${frontAddr}]]';
+            const signupType = '[[${signupType}]]';
+            window.location.href = frontAddr + "/login/signup/"+signupType+"/step1/fail"
+            // setTimeout(window.close(), 1000);
+        }
+    </script>
+</head>
+<body>
+    본인인증에 실패하셨습니다. 다시 시도해주세요.
+</body>
+</html>

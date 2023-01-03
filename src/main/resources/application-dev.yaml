@@ -1,0 +1,75 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+      enabled: true
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql:///
+    username:
+    password:
+    hikari:
+      pool-name: hikari-cp
+      maximum-pool-size: 2
+      max-lifetime: 55000
+      auto-commit: false
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+#    hibernate:
+#      ddl-auto: create
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+        ddl-auto: none
+
+properties:
+  path:
+    url:
+      member:
+      front:
+      file:
+    check:
+      plus:
+      hash:
+    xx:
+      mid:
+      key:
+      domain:
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: ${file.separator}log${file.separator}api.log
+  level:
+    root: info
+    com:
+      zaxxer:
+        hikari: info
+    jdbc:
+      resultset: info
+      resultsettable: info
+      audit: info
+      sqltiming: info
+      connection: info
+    org.hibernate:
+      type: off
+      SQL: info
+    org.springframework.web: info
+    javax.sql.DataSource: info
+    log4jdbc.log4j2: off
+
+
+aws:
+  api:
+    email:
+      accessKey:
+      secretKey:

@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <script language='javascript'>
+        window.onload = function(){
+            console.log('[[${frontAddr}]]');
+            const frontAddr = '[[${frontAddr}]]';
+            const signupType = '[[${signupType}]]';
+            window.location.href = frontAddr + "/login/signup/"+signupType+"/step1/success"
+            // setTimeout(window.close(), 1000);
+        }
+    </script>
+    <title>Checkplus 본인인증</title>
+</head>
+<body>
+    본인인증에 성공하셨습니다.
+    팝업창을 종료하고 회원가입을 진행해주세요.
+</body>
+</html>
